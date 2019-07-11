@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/stead99/cgdspy
+    $ git clone git://github.com/go-choppy/cgdspy
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/stead99/cgdspy/tarball/master
+    $ curl  -OL https://github.com/go-choppy/cgdspy/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/stead99/cgdspy
-.. _tarball: https://github.com/stead99/cgdspy/tarball/master
+.. _Github repo: https://github.com/go-choppy/cgdspy
+.. _tarball: https://github.com/go-choppy/cgdspy/tarball/master
