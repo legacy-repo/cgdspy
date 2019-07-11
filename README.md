@@ -21,7 +21,7 @@ xxx
 To instantiate a new circos:
 
 ```python
-mycgds = CGDSR("http://www.cbioportal.org/", token = None, verbose = False, ploterrormsg = '')
+mycgds = CGDSPY("http://www.cbioportal.org/", token = None, verbose = False, ploterrormsg = '')
 mycancerstudy = mycgds.get_cancer_studies()
 mycancerstudy = mycancerstudy.iat[1, 0]
 mycaselist = mycgds.get_case_lists(mycancerstudy)
