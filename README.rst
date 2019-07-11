@@ -13,14 +13,13 @@ cgdspy
         :target: https://cgdspy.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
 .. image:: https://pyup.io/repos/github/stead99/cgdspy/shield.svg
      :target: https://pyup.io/repos/github/stead99/cgdspy/
      :alt: Updates
 
 
 
-Python R-Based API for accessing the MSKCC Cancer Genomics Data 
+Python based API for accessing the Cancer Genomics Data Server (CGDS).
 
 
 * Free software: GNU Affero General Public License v3
@@ -35,7 +34,7 @@ Features
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+This package was created with Cookiecutter_ and the `go-choppy/choppy-cookiecutter-pypackage`_ project template.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _`go-choppy/choppy-cookiecutter-pypackage`: https://github.com/go-choppy/choppy-cookiecutter-pypackage

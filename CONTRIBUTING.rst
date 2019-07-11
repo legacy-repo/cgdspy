@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/stead99/cgdspy/issues.
+Report bugs at https://github.com/go-choppy/cgdspy/issues.
 
 If you are reporting a bug, please include:
 

@@ -4,6 +4,7 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+from cgdspy import __version__
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -11,9 +12,9 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = ['requests', 'pandas' ]
 
-setup_requirements = ['pytest-runner',, "isort"]
+setup_requirements = ['pytest-runner', "isort"]
 
 test_requirements = ['pytest', ]
 
@@ -35,7 +36,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Python R-Based API for accessing the MSKCC Cancer Genomics Data ",
+    description="Python based API for accessing the Cancer Genomics Data Server (CGDS).",
     install_requires=requirements,
     license="GNU Affero General Public License v3",
     long_description=readme + '\n\n' + history,
@@ -47,6 +48,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/go-choppy/cgdspy',
-    version='0.1.0',
+    version=__version__,
     zip_safe=False,
 )
