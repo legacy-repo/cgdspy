@@ -1,5 +1,4 @@
-# choppy-data-portal-cgdspy [(https://coveralls.io/repos/github/nicgirault/circosJS/badge.svg?branch=master)](https://coveralls.io/github/nicgirault/circosJS?branch=master)
-
+# choppy-data-portal-cgdspy 
 ## table of contents
 
 - [Introduction](#introduction)
