@@ -14,9 +14,9 @@ cgdspy based API for accessing the Cancer Genomics Data Server (CGDS). It's base
 
 ### Stable release
 To install cgdspy, run this command in your terminal:
-‘’‘python
+```python
 pip install cgdspy
-'''
+```
 This is the preferred method to install cgdspy, as it will always install the most recent stable release.
 
 If you don’t have pip installed, this Python installation guide can guide you through the process.
@@ -25,17 +25,17 @@ If you don’t have pip installed, this Python installation guide can guide you 
 The sources for cgdspy can be downloaded from the Github repo.
 
 You can either clone the public repository:
-'''python
+```python
 $ git clone git://github.com/go-choppy/cgdspy
-'''
+```
 Or download the tarball:
-'''py
+```py
 $ curl  -OL https://github.com/go-choppy/cgdspy/tarball/master
-'''
+```
 Once you have a copy of the source, you can install it with:
-'''python
+```python
 $ python setup.py install
-'''
+```
 
 ## Usage
 
