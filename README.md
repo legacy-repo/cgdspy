@@ -42,30 +42,39 @@ $ python setup.py install
 To instantiate a new cgds:
 
 ```python
-mycgds = CGDSPY("http://www.cbioportal.org/", token = None, verbose = False, ploterrormsg = '')
-mycancerstudy = mycgds.get_cancer_studies()
-mycancerstudy = mycancerstudy.iat[1, 0]
-mycaselist = mycgds.get_case_lists(mycancerstudy)
-mycaselist = mycaselist.iat[0, 0]
-mygeneticprofile = mycgds.get_genetic_profiles(mycancerstudy)
-mygeneticprofile = mygeneticprofile.iat[0, 0]
+import cgdspy
+mycgds = cgdspy.CGDSPY("http://www.cbioportal.org/", token = None, verbose = False, ploterrormsg = '')
 
+# get cancer study
+mycancerstudy = mycgds.get_cancer_studies()
+mycancerstudy = mycancerstudy.iat[1, 0] #'mel_tsam_liang_2017'
+
+# get case list
+mycaselist = mycgds.get_case_lists(mycancerstudy)
+mycaselist = mycaselist.iat[0, 0] #'mel_tsam_liang_2017_all'
+
+# get genetic profile
+mygeneticprofile = mycgds.get_genetic_profiles(mycancerstudy)
+mygeneticprofile = mygeneticprofile.iat[0, 0] #'mel_tsam_liang_2017_cna'
 
 # Get data slices for a specified list of genes, genetic profile and case list
 gene_list = 'HMGA2'
-mycgds.get_profile_data(gene_list, mygeneticprofile, mycaselist)
+myprofiledata = mycgds.get_profile_data(gene_list, mygeneticprofile, mycaselist) #data frame
 
 gene_list = ('BRCA1','BRCA2')
-mycgds.get_profile_data(gene_list, mygeneticprofile, mycaselist)
+myprofiledata = mycgds.get_profile_data(gene_list, mygeneticprofile, mycaselist) #get profile data of two genes
 
 gene_list = 'HMGA2'
 mygeneticprofile =  mycgds.get_genetic_profiles(mycancerstudy)
 mygeneticprofile = mygeneticprofile.ix[[0, 1], [0]]
-mygeneticprofile = mygeneticprofile['genetic_profile_id']
-mycgds.get_profile_data(gene_list, mygeneticprofile, mycaselist)
+# 0           mel_tsam_liang_2017_cna
+# 1  mel_tsam_liang_2017_rna_seq_mrna
 
-#
-mycgds.GetClinicalData(mycaselist)
+mygeneticprofile = mygeneticprofile['genetic_profile_id']
+myprofiledata = mycgds.get_profile_data(gene_list, mygeneticprofile, mycaselist) # get cna and mrna data
+
+#get clinical data
+myclidata = mycgds.get_clinical_data(mycaselist) # get clinical data
 ```
 
 ## Configuration Attributes
